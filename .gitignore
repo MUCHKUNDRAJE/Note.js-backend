@@ -1,0 +1,9 @@
+node_modules
+dist
+dist-ssr
+*.local
+
+.env
+.env.local
+
+notesjs-3235a-firebase-adminsdk-fbsvc-6f8f14c41d.json
