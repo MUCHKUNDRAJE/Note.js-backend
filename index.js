@@ -4,6 +4,7 @@ const http = require("http");
 const { Server } = require("socket.io");
 const taskRoutes = require("./routes/taskRoutes");
 const taskSocket = require("./sockets/taskSocket");
+const  morgan = require("morgan")
 
 const app = express();
 const server = http.createServer(app);
@@ -14,6 +15,7 @@ const io = new Server(server, {
 
 app.use(cors());
 app.use(express.json());
+app.use(morgan("dev"))
 
 // Routes
 app.use("/api/tasks", taskRoutes);
